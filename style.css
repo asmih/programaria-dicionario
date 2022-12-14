@@ -1,37 +1,67 @@
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, rgb(19,25,66), #927fb6, #62c5c8, #0c2f47 );
+    background-color: #040c28;
 }
 
 header {
     height: 100px;
     margin-bottom: 40px;
-    border-bottom: 1px solid #000;    
+    border-bottom: 1px solid #777;
+    color: whitesmoke;
+    font-family:'Courier New', Courier, monospace;
 }
 
 h1 {
     text-transform: uppercase;
     margin-bottom: 0;
+    text-align: center;
+}
+
+h1::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { 
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+header p {
+    text-align: center;
 }
 
 section{
     margin: 0 auto;
     display: block;
     max-width: 1024px;
-    height: 50%;
+    height: 100%;
 }
 
 .card{
     display: inline-block;
     margin: 10px;
-    border: 1px solid #000;
+    border: 1px solid #777;
     vertical-align: top;
     max-height: 100%;
+    background-color: #927fb6;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 4px;
 }
 
 .card img {
     display: block;
     width: 300px;
     height: 300px;
+    border: none;
 }
 
 .card details {
@@ -50,7 +80,7 @@ section{
 }
 
 .card details blockquote{
-    color: #777;
+    color: rgb(58, 57, 57);
     font-style: italic;
 } 
 
